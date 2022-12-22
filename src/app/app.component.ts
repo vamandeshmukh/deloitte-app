@@ -6,10 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'deloitte-app';
-  firstName = 'Sonu';
-  salary = 100;
 
+  firstName = '';
+  
   getFun = () => {
     console.log('event binding');
    };

@@ -1,0 +1,30 @@
+<div>
+    <!-- take input from user  -->
+    <div>
+        <input type="text" [(ngModel)]="userDataEntered.firstName" placeholder="Enter first name">
+        <br />
+        <input type="number" [(ngModel)]="userDataEntered.phone" placeholder="Enter phone">
+        <br />
+        <input type="email" [(ngModel)]="userDataEntered.email" placeholder="Enter email">
+        <br />
+        <input type="button" (click)="submitUserData()" value="Submit">
+    </div>
+
+    <!-- display data as being entered  -->
+    <div>
+        <h3>User Data Being Entered</h3>
+        <p>First name: {{userDataEntered.firstName}} </p>
+        <p>Phone: {{userDataEntered.phone}} </p>
+        <p>Email: {{userDataEntered.email}} </p>
+    </div>
+
+    <!-- display data after submit  -->
+    <div>
+        <h3>User Data after Submit</h3>
+        <p>First name: {{userDataToDisplay.firstName}} </p>
+        <p>Phone: {{userDataToDisplay.phone}} </p>
+        <p>Email: {{userDataToDisplay.email}} </p>
+    </div>
+
+
+</div>
