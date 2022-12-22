@@ -9,5 +9,9 @@ export class AppComponent {
   title = 'deloitte-app';
   firstName = 'Sonu';
   salary = 100;
-  isDisabled = true;
+
+  getFun = () => {
+    console.log('event binding');
+   };
+
 }
