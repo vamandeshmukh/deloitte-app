@@ -21,4 +21,7 @@ import { AboutComponent } from './about/about.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+
+  
+}
