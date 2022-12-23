@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AboutComponent {
 
+  myNums = [25, 31, 9, 22];
 
   empList = [
     { eid: 101, fName: 'Sonu', salary: 90000 },
@@ -14,29 +15,5 @@ export class AboutComponent {
     { eid: 103, fName: 'Tonu', salary: 99000 },
     { eid: 104, fName: 'Gonu', salary: 98000 },
   ];
-
-  myNums = [25, 31, 9, 22];
-
-  Object = Object;
-
-  myObj = {
-    "id": 834,
-    "first_name": "GS",
-    "last_name": "Shahid",
-    "phone": "03215110224",
-    "role": null,
-    "email": "test@example.com",
-    "picture": {
-      "url": null,
-      "thumb": {
-        "url": null
-      }
-    },
-    "address": "Nishtar Colony",
-    "city_id": 2,
-    "provider": "email",
-    "uid": "test@example.com"
-  }
-
 
 }
