@@ -12,6 +12,8 @@ export class AboutComponent {
 
   myNums = [25, 31, 9, 22];
 
+  empList2 = [];
+
   empList = [
     { eid: 101, fName: 'Sonu', salary: 90000 },
     { eid: 102, fName: 'Monu', salary: 95000 },
