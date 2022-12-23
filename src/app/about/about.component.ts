@@ -7,6 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AboutComponent {
 
+  myName = 'Kasyap';
+  mySalary = 100.25;
+
   myNums = [25, 31, 9, 22];
 
   empList = [
