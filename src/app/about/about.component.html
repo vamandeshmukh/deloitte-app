@@ -27,7 +27,7 @@
     <h3>List of Employees</h3>
     <span *ngFor="let e of empList[0] | keyvalue"> <b> {{ e.key }} </b> </span>
     <div *ngFor="let emp of empList">
-        <span *ngFor="let item of emp | keyvalue"> {{ item.value }} </span>
+        <span *ngFor="let e of emp | keyvalue"> {{ e.value }} </span>
     </div>
 
 </div>
