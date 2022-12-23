@@ -1,7 +1,15 @@
-<p>about works!</p>
+<div>
 
-<p>Display array elements with *ngFor</p>
+    <p>about works!</p>
 
-<div *ngFor="let num of myNums"> {{ num }} </div>
+    <p>Display array elements with *ngFor</p>
 
-<div *ngFor="let emp of empList"> {{ emp }} </div>
+    <div *ngFor="let num of myNums"> {{ num }} </div>
+
+    <p>List of Employees</p>
+
+
+    <div *ngFor="let emp of empList"> {{emp.eid}} {{emp.fName}} {{emp.salary}}</div>
+
+
+</div>
