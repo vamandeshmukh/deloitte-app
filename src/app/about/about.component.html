@@ -3,13 +3,22 @@
     <p>about works!</p>
 
     <p>Display array elements with *ngFor</p>
-
     <div *ngFor="let num of myNums"> {{ num }} </div>
 
-    <p>List of Employees</p>
-
-
+    <h3>List of Employees</h3>
     <div *ngFor="let emp of empList"> {{emp.eid}} {{emp.fName}} {{emp.salary}}</div>
 
+    <h3>List of Employees</h3>
+    <div *ngFor="let emp of empList">
+        <span *ngFor="let item of emp | keyvalue">
+            {{ item.key }}: {{ item.value }}
+        </span>
+    </div>
+
+    <h3>List of Employees</h3>
+    <span *ngFor="let item of empList[0] | keyvalue"> <b> {{ item.key }} </b> </span>
+    <div *ngFor="let emp of empList">
+        <span *ngFor="let item of emp | keyvalue"> {{ item.value }} </span>
+    </div>
 
 </div>
