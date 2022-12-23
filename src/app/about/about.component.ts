@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AboutComponent {
 
+  
+
+  myList = [  ];
+
+  myNums = [25, 31, 9, 22];
+
+
+
 }

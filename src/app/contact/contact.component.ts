@@ -12,6 +12,7 @@ export class ContactComponent {
         phone: '',
         email: ''
     };
+
     userDataToDisplay = {
         firstName: '',
         phone: '',
@@ -26,5 +27,5 @@ export class ContactComponent {
             email: ''
         };
     };
-
 }
+ 
