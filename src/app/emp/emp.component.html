@@ -1,20 +1,74 @@
-<h3>Emp Data</h3>
-<div>
-    <p>Search Employee by Id</p>
-    <input type="number" (input)="setEid($event)">
-    <br />
-    <br />
-    <button (click)="getEmpById()">Get Employee by Id</button>
+<div class="container">
+
+    <h3>Emp Data</h3>
+    <div>
+        <p>Search Employee by Id</p>
+        <input type="number" (input)="setEid($event)">
+        <br />
+        <br />
+        <button (click)="getEmpById()">Get Employee by Id</button>
+    </div>
+    <div>
+        <p>Found employee by id</p>
+        <p>Emp id : {{empData.id}} </p>
+        <p>Emp name : {{empData.name}} </p>
+        <p>Emp email : {{empData.email}} </p>
+        <p>Emp username : {{empData.username}} </p>
+    </div>
+    <button (click)="getAllEmps()">Get All Employees</button>
+
+    <div>
+        <p>All employees data</p>
+        <div class="col-6">
+            <div *ngIf="allEmps.length > 0">
+                <table class="table table-dark table-striped">
+                    <thead>
+                        <tr>
+                            <th>Eid</th>
+                            <th>Name</th>
+                            <th>Username</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let emp of allEmps">
+                            <td>{{emp.id}}</td>
+                            <td>{{emp.name}}</td>
+                            <td>{{emp.username}}</td>
+                            <td>{{emp.email}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </div>
-<div>
-    <p>Found employee by id</p>
-    <p>Emp id : {{empData.id}} </p>
-    <p>Emp name : {{empData.name}} </p>
-    <p>Emp email : {{empData.email}} </p>
-    <p>Emp username : {{empData.username}} </p>
-</div>
-<button >Get All Employees</button>
+
+
+
+
 <div>
     <p>All employees data</p>
-    <div>render all employees data here</div>
+    <div>
+        <div *ngIf="allEmps.length > 0">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Eid</th>
+                        <th>Name</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let emp of allEmps">
+                        <td>{{emp.id}}</td>
+                        <td>{{emp.name}}</td>
+                        <td>{{emp.username}}</td>
+                        <td>{{emp.email}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
