@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
   constructor() {
     this.loginForm = new FormGroup({});
   };
-
+ 
   loggedInData = {
     userName: '',
     password: ''
