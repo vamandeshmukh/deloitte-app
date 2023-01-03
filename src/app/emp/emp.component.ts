@@ -28,11 +28,12 @@ export class EmpComponent {
     this.empId = $event.target.value;
   }
 
-  getEmpById = () => {
+  getEmpById = () => { // 
     this.service.getEmployeeById(this.empId)
-      .subscribe(response => {
-        console.log(response);
-        this.empData = response.valueOf()
+      .subscribe({
+        next: (response) => { this.empData = response.valueOf() },
+        error: (error) => { console.log(error); },
+        complete: () => { console.log('finally done!'); }
       });
   };
 
