@@ -1,0 +1,14 @@
+<h3>Emp Data</h3>
+<div>
+    <p>Search Employee by Id</p>
+    <input type="number" (input)="setEid($event)">
+    <br />
+    <br />
+    <button (click)="getEmpById()">Get Employee by Id</button>
+</div>
+<div>
+    <p>Emp id : {{empData.id}} </p>
+    <p>Emp name : {{empData.name}} </p>
+    <p>Emp email : {{empData.email}} </p>
+    <p>Emp username : {{empData.username}} </p>
+</div>

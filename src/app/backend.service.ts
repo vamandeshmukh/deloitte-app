@@ -12,6 +12,11 @@ export class BackendService {
   // GET, POST, ... 
 
   // 
+
+  getEmployeeById = (eid: number) => {
+    return this.http.get(`https://jsonplaceholder.typicode.com/users/${eid}`);
+  };
+
   getUserData = () => {
     return this.http.get(this.dataUrl);
   };

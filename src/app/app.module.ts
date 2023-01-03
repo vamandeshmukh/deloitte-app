@@ -11,6 +11,7 @@ import { AboutComponent } from './about/about.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { LoginComponent } from './login/login.component';
+import { EmpComponent } from './emp/emp.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { LoginComponent } from './login/login.component';
     AboutComponent,
     ParentComponent,
     ChildComponent,
-    LoginComponent
+    LoginComponent,
+    EmpComponent
   ],
   imports: [
     BrowserModule,
