@@ -10,3 +10,4 @@ export class ParentComponent {
   parentData: string = 'abc';
 
 }
+
