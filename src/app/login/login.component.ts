@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+// import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -19,8 +19,8 @@ export class LoginComponent  {
   };
 
   submitLogin = (login: any) => {
-  this.submittedData = login.value;
     console.log(login.value);
+    this.submittedData = login.value;
   };
 
 }
