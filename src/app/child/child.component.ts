@@ -14,7 +14,7 @@ export class ChildComponent {
   childData: string = 'def';
 
   @Output()
-  sendEvent = new EventEmitter<any>();
+  sendEvent = new EventEmitter<string>();
 
   sendChildData = () => {
     console.log('sendChildData called');
