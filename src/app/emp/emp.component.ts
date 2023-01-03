@@ -21,6 +21,8 @@ export class EmpComponent {
     email: ''
   };
 
+  allEmps: any = [];
+
   setEid = ($event: any) => {
     console.log($event);
     this.empId = $event.target.value;
@@ -32,7 +34,11 @@ export class EmpComponent {
         console.log(response);
         this.empData = response.valueOf()
       });
-    console.log(this.empData);
+  };
+
+  getAllEmps = () => {
+    this.service.getAllEmployees()
+      .subscribe((response) => { this.allEmps = response.valueOf() });
   };
 
 }

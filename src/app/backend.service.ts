@@ -8,13 +8,12 @@ export class BackendService {
 
   dataUrl = './assets/users.json';
 
-  // http requests 
-  // GET, POST, ... 
-
-  // 
-
   getEmployeeById = (eid: number) => {
     return this.http.get(`https://jsonplaceholder.typicode.com/users/${eid}`);
+  };
+
+  getAllEmployees = () => {
+    return this.http.get(`https://jsonplaceholder.typicode.com/users/`);
   };
 
   getUserData = () => {
