@@ -1,6 +1,5 @@
 
-
-import { Component, Input } from '@angular/core';
+import { Component, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -12,6 +11,19 @@ export class ChildComponent {
   @Input()
   parentDataInChild: string = '';
 
+  childData: string = 'def';
+
+  @Output()
+  sendEvent = new EventEmitter<any>();
+
+  sendChildData = () => {
+    console.log('sendChildData called');
+    this.sendEvent.emit(this.childData);
+  };
+
 
 }
+
+
+
 

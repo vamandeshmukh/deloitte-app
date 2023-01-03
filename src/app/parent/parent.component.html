@@ -1,7 +1,10 @@
 <h3>Parent component</h3>
 
 <p>Parent data in parent component: {{parentData}}</p>
+<p>Child data in parent component: {{childDataInParent}}</p>
 
 <!-- <app-child></app-child> -->
 
-<app-child [parentDataInChild]="parentData"></app-child>
+<!-- <app-child [parentDataInChild]="parentData"></app-child> -->
+
+<app-child (sendChildData)="receiveChildData($event)"></app-child>
