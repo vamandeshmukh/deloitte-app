@@ -13,6 +13,12 @@ export class LoginComponent implements OnInit {
   constructor() {
     this.loginForm = new FormGroup({});
   };
+
+  loggedInData = {
+    userName: '',
+    password: ''
+  };
+
   ngOnInit(): void {
     this.loginForm = new FormGroup({
       userName: new FormControl(''),
@@ -21,6 +27,7 @@ export class LoginComponent implements OnInit {
   }
 
   submitLogin = () => {
+    this.loggedInData = this.loginForm.value;
     console.log(this.loginForm.value);
   };
 
