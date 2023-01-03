@@ -1,4 +1,21 @@
-<h3>Login Form (reactive form) </h3>
+<h3>Login Form (template driven form) </h3>
+
+<div>
+    <form #login="ngForm" (ngSubmit)="submitLogin(login)">
+        <input type="text" [(ngModel)]="loggedInData.userName" name="userName">
+        <br />
+        <br />
+        <input type="password" [(ngModel)]="loggedInData.password" name="password">
+        <br />
+        <br />
+        <button type="submit">Submit</button>
+    </form>
+</div>
+<div>
+    <p>{{'Welcome ' + submittedData.userName + '!'}}</p>
+</div>
+
+<!-- <h3>Login Form (reactive form) </h3>
 
 <div>
     <form [formGroup]="loginForm" (ngSubmit)="submitLogin()">
@@ -13,4 +30,4 @@
 </div>
 <div>
     <p>{{'Welcome ' + loggedInData.userName + '!'}}</p>
-</div>   
+</div> -->
