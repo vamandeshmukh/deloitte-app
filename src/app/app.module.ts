@@ -13,6 +13,7 @@ import { ChildComponent } from './child/child.component';
 import { LoginComponent } from './login/login.component';
 import { EmpComponent } from './emp/emp.component';
 import { HeaderComponent } from './header/header.component';
+import { Page404Component } from './page404/page404.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HeaderComponent } from './header/header.component';
     ChildComponent,
     LoginComponent,
     EmpComponent,
-    HeaderComponent
+    HeaderComponent,
+    Page404Component
   ],
   imports: [
     BrowserModule,
