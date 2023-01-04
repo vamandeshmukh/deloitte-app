@@ -1,13 +1,10 @@
-<!-- <div>
-    <span [routerLink]="['/']">Home </span>
-    <span [routerLink]="['/emp']">Emp </span>
-    <span [routerLink]="['/login']">Login </span>
-    <span [routerLink]="['/logout']">Logout </span>
-    <span [routerLink]="['/register']">Register </span>
-</div> -->
-
-
 <!-- Header Component -->
+
+<div>
+    <p> {{loginStatus}} </p>
+
+</div>
+
 <header class="header sticky-top">
     <nav class="navbar navbar-fixed-top navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
@@ -18,11 +15,15 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
+
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-
                     <li class="nav-item">
                         <a [routerLink]="['/emp']" class="nav-link">Emp</a>
+                    </li>
+                    <li class="nav-item">
+                        <a [routerLink]="['/parent']" class="nav-link">Parent</a>
                     </li>
                     <li class="nav-item">
                         <a [routerLink]="['/register']" class="nav-link">Register</a>

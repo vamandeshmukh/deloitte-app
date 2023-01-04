@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { BackendService } from '../backend.service';
+import { EmpService } from '../services/emp/emp.service';
 
 @Component({
   selector: 'app-emp',
@@ -9,7 +9,7 @@ import { BackendService } from '../backend.service';
 })
 export class EmpComponent {
 
-  constructor(private service: BackendService) {
+  constructor(private service: EmpService) {
     // this.addEmpForm: FormGroup;
     this.empId = 0;
   };
@@ -45,44 +45,44 @@ export class EmpComponent {
   }
 
   getEmpById = () => { // 
-    this.service.getEmployeeById(this.empId)
-      .subscribe({
-        next: (response) => { this.empData = response.valueOf() },
-        error: (error) => { console.log(error); },
-        complete: () => { console.log('finally done!'); }
-      });
+    // this.service.getEmployeeById(this.empId)
+    //   .subscribe({
+    //     next: (response) => { this.empData = response.valueOf() },
+    //     error: (error) => { console.log(error); },
+    //     complete: () => { console.log('finally done!'); }
+    //   });
   };
 
   getAllEmps = () => {
-    this.service.getAllEmployees()
-      .subscribe((response) => { this.allEmps = response.valueOf() });
+    // this.service.getAllEmployees()
+    //   .subscribe((response) => { this.allEmps = response.valueOf() });
   };
 
   addEmp = () => {
     console.log(this.addEmpForm.value);
-    this.service.addEmployee(this.addEmpForm.value)
-      .subscribe((response) => {
-        this.empData = response.valueOf();
-        alert(`Eid ${this.empData.id} added successfully.`);
-      });
+    // this.service.addEmployee(this.addEmpForm.value)
+    //   .subscribe((response) => {
+    //     this.empData = response.valueOf();
+    //     alert(`Eid ${this.empData.id} added successfully.`);
+    //   });
   };
 
   updateEmp = () => {
     console.log(this.addEmpForm.value);
-    this.service.updateEmployee(this.addEmpForm.value)
-      .subscribe((response) => {
-        this.empData = response.valueOf();
-        alert(`Eid ${this.empData.id} updated successfully.`);
-      });
+    // this.service.updateEmployee(this.addEmpForm.value)
+    //   .subscribe((response) => {
+    //     this.empData = response.valueOf();
+    //     alert(`Eid ${this.empData.id} updated successfully.`);
+    //   });
   };
 
   deleteEmp = () => {
     console.log(this.addEmpForm.value);
-    this.service.deleteEmployee(this.empId)
-      .subscribe((response) => {
-        this.empData = response.valueOf();
-        alert(`Eid ${this.empData.id} deleted successfully.`);
-      });
+    // this.service.deleteEmployee(this.empId)
+    //   .subscribe((response) => {
+    //     this.empData = response.valueOf();
+    //     alert(`Eid ${this.empData.id} deleted successfully.`);
+    //   });
   };
 
 }
