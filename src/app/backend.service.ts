@@ -9,20 +9,32 @@ export class BackendService {
   constructor(private http: HttpClient) { }
 
   // dataUrl: string = './assets/users.json';
-  httpUrl: string = 'https://jsonplaceholder.typicode.com/users';
-
-  getEmployeeById = (eid: number) => {
-    return this.http.get(`https://jsonplaceholder.typicode.com/users/${eid}`);
-  };
+  // guide: https://jsonplaceholder.typicode.com/
+  httpUrl: string = 'https://jsonplaceholder.typicode.com/users/';
 
   getAllEmployees = () => {
-    return this.http.get(`https://jsonplaceholder.typicode.com/users/`);
+    return this.http.get(this.httpUrl);
   };
+
+  getEmployeeById = (eid: number) => {
+    return this.http.get(`${this.httpUrl}${eid}`);
+  };
+
+  // getEmployeeByName
+  // getEmployeeByUserName
+  // getEmployeeBySalaryGreaterThan
 
   addEmployee = (emp: any) => {
     return this.http.post(this.httpUrl, emp);
   };
 
+  updateEmployee(emp: any) {
+    return this.http.put(this.httpUrl, emp);
+  }
+
+  deleteEmployee(eid: number) {
+    return this.http.delete(`${this.httpUrl}${eid}`);
+  }
 }
 
 

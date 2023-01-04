@@ -67,4 +67,22 @@ export class EmpComponent {
       });
   };
 
+  updateEmp = () => {
+    console.log(this.addEmpForm.value);
+    this.service.updateEmployee(this.addEmpForm.value)
+      .subscribe((response) => {
+        this.empData = response.valueOf();
+        alert(`Eid ${this.empData.id} updated successfully.`);
+      });
+  };
+
+  deleteEmp = () => {
+    console.log(this.addEmpForm.value);
+    this.service.deleteEmployee(this.empId)
+      .subscribe((response) => {
+        this.empData = response.valueOf();
+        alert(`Eid ${this.empData.id} deleted successfully.`);
+      });
+  };
+
 }
