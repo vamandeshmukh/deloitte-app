@@ -1,20 +1,20 @@
-<h3>Login Form (reactive form) </h3>
-
-<div>
-    <form [formGroup]="loginForm" (ngSubmit)="submitLogin()">
-        <input type="text" formControlName="userName">
-        <br />
-        <br />
-        <input type="password" formControlName="password">
-        <br />
-        <br />
-        <button type="submit">Submit</button>
-    </form>
+<!-- reactive form  -->
+<div class="container mt-3 pt-3">
+    <p class="display-4">Login</p>
+    <hr />
+    <div class="mt-3 pt-3 d-flex ">
+        <form class="form form-group" [formGroup]="loginForm" (ngSubmit)="submitLogin()">
+            <input class="form-control bg-dark mt-3 text-light" type="text" formControlName="userName"
+                placeholder="Please enter username">
+            <input class="form-control bg-dark mt-3 text-light" type="password" formControlName="password"
+                placeholder="Please enter password">
+            <button class="btn btn-outline-light mt-3 text-secondary text-right" type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="mt-3 pt-3" *ngIf="loggedInData.userName" >
+        <p>{{'Welcome ' + loggedInData.userName + '!'}}</p>
+    </div>
 </div>
-
-<div>
-    <p>{{'Welcome ' + loggedInData.userName + '!'}}</p>
-</div> 
 
 <!-- <h3>Login Form (template driven form) </h3>
 
@@ -32,4 +32,3 @@
 <div>
     <p>{{'Welcome ' + submittedData.userName + '!'}}</p>
 </div> -->
-
