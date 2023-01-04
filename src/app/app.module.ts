@@ -14,6 +14,8 @@ import { LoginComponent } from './login/login.component';
 import { EmpComponent } from './emp/emp.component';
 import { HeaderComponent } from './header/header.component';
 import { Page404Component } from './page404/page404.component';
+import { LogoutComponent } from './logout/logout.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { Page404Component } from './page404/page404.component';
     LoginComponent,
     EmpComponent,
     HeaderComponent,
-    Page404Component
+    Page404Component,
+    LogoutComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
