@@ -61,9 +61,9 @@ export class EmpComponent {
   addEmp = () => {
     console.log(this.addEmpForm.value);
     this.service.addEmployee(this.addEmpForm.value)
-      .subscribe((response) => { 
+      .subscribe((response) => {
         this.empData = response.valueOf();
-        alert(`${response.valueOf} added successfully.`); 
+        alert(`Eid ${this.empData.id} added successfully.`);
       });
   };
 
