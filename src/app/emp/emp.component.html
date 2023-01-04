@@ -1,6 +1,23 @@
 <div class="container">
 
     <h3>Emp Data</h3>
+
+    <div>
+        <form [formGroup]="addEmpForm" (ngSubmit)="addEmp()">
+            <input type="text" formControlName="name">
+            <br />
+            <br />
+            <input type="text" formControlName="userName">
+            <br />
+            <br />
+            <input type="email" formControlName="email">
+            <br />
+            <br />
+            <button type="submit">Add Employee</button>
+        </form>
+    </div>
+    
+
     <div>
         <p>Search Employee by Id</p>
         <input type="number" (input)="setEid($event)">

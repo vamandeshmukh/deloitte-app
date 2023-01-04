@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { BackendService } from '../backend.service';
 
 @Component({
@@ -9,8 +10,23 @@ import { BackendService } from '../backend.service';
 export class EmpComponent {
 
   constructor(private service: BackendService) {
+    // this.addEmpForm: FormGroup;
     this.empId = 0;
   };
+
+  ngOnInit(): void {
+    // this.addEmpForm = new FormGroup({
+    //   name: new FormControl(''),
+    //   userName: new FormControl(''),
+    //   email: new FormControl('')
+    // });
+  }
+
+  addEmpForm: FormGroup = new FormGroup({
+    name: new FormControl(''),
+    userName: new FormControl(''),
+    email: new FormControl('')
+  });
 
   empId: any;
 
@@ -43,8 +59,12 @@ export class EmpComponent {
   };
 
   addEmp = () => {
-    this.service.addEmployee(null);
+    console.log(this.addEmpForm.value);
+    this.service.addEmployee(this.addEmpForm.value)
+      .subscribe((response) => { 
+        this.empData = response.valueOf();
+        alert(`${response.valueOf} added successfully.`); 
+      });
   };
 
 }
- 
