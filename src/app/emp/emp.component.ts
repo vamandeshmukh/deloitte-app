@@ -42,4 +42,9 @@ export class EmpComponent {
       .subscribe((response) => { this.allEmps = response.valueOf() });
   };
 
+  addEmp = () => {
+    this.service.addEmployee(null);
+  };
+
 }
+ 

@@ -12,6 +12,7 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { LoginComponent } from './login/login.component';
 import { EmpComponent } from './emp/emp.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { EmpComponent } from './emp/emp.component';
     ParentComponent,
     ChildComponent,
     LoginComponent,
-    EmpComponent
+    EmpComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,49 @@
+// // reactive form with validations 
+// import { Component, OnInit } from '@angular/core';
+// import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
+
+// @Component({
+//   selector: 'app-login',
+//   templateUrl: './login.component.html',
+//   styleUrls: ['./login.component.css']
+// })
+// export class LoginComponent implements OnInit {
+
+//   loginForm: FormGroup;
+
+//   // 1 
+//   constructor(private formBuilder: FormBuilder) {
+//     this.loginForm = formBuilder.group({
+//       userName: ['', Validators.required, {updateOn: 'blur'}],
+//       password: ['', Validators.required, {updateOn: 'blur'}]
+//     });
+
+//   };
+
+//   loggedInData = {
+//     userName: '',
+//     password: ''
+//   };
+
+//   // 2 
+//   ngOnInit(): void {
+//     this.loginForm = new FormGroup({
+//       userName: new FormControl(''),
+//       password: new FormControl('')
+//     });
+//   }
+
+//   submitLogin = () => {
+//     this.loggedInData = this.loginForm.value;
+//     console.log(this.loginForm.value);
+//   };
+
+// }
+
+
+// reactive form 
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { BackendService } from '../backend.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -11,7 +54,7 @@ export class LoginComponent implements OnInit {
   loginForm: FormGroup;
 
   // 1 
-  constructor(private service: BackendService) {
+  constructor() {
     this.loginForm = new FormGroup({});
   };
 
@@ -29,9 +72,6 @@ export class LoginComponent implements OnInit {
   }
 
   submitLogin = () => {
-    this.service.getUserData()
-      .subscribe((response) => { console.log(response); });
-
     this.loggedInData = this.loginForm.value;
     console.log(this.loginForm.value);
   };
@@ -47,6 +87,7 @@ export class LoginComponent implements OnInit {
 
 
 
+// template-driven form 
 // import { Component} from '@angular/core';
 
 // @Component({
@@ -82,3 +123,4 @@ export class LoginComponent implements OnInit {
 
 
 
+ 

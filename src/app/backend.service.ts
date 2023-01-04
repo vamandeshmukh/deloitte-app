@@ -6,7 +6,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class BackendService {
 
-  dataUrl = './assets/users.json';
+  constructor(private http: HttpClient) { }
+
+  // dataUrl: string = './assets/users.json';
+  httpUrl: string = 'https://jsonplaceholder.typicode.com/users';
 
   getEmployeeById = (eid: number) => {
     return this.http.get(`https://jsonplaceholder.typicode.com/users/${eid}`);
@@ -16,11 +19,10 @@ export class BackendService {
     return this.http.get(`https://jsonplaceholder.typicode.com/users/`);
   };
 
-  getUserData = () => {
-    return this.http.get(this.dataUrl);
+  addEmployee = (emp: any) => {
+    return this.http.post(this.httpUrl, emp);
   };
 
-  constructor(private http: HttpClient) { }
 }
 
 
