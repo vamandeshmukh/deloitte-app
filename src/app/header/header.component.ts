@@ -8,10 +8,10 @@ import { AuthGuard } from '../services/authorization/auth-guard';
 })
 export class HeaderComponent {
 
-  loginStatus: string | any;
+  // loginStatus: string | any;
 
-  constructor(authGuard: AuthGuard) {
-    this.loginStatus = localStorage.getItem('appUser');
-  }
+  // constructor(authGuard: AuthGuard) {
+  //   this.loginStatus = localStorage.getItem('appUser');
+  // }
 
 }
