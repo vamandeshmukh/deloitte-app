@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ProductService } from 'src/app/services/product/product.service';
 
 @Component({
   selector: 'app-search-product',
@@ -10,12 +10,23 @@ import { Router } from '@angular/router';
 export class SearchProductComponent {
 
   searchQuery: string;
+  allProds: any = [];
 
-  constructor(private router: Router) { this.searchQuery = ''; }
+  constructor(private router: Router, private productService: ProductService) { this.searchQuery = ''; }
 
   searchProduct() {
-    this.router.navigate(['/product-details', this.searchQuery]);
+
+    this.productService.getAllProducts().subscribe((prod) => {
+      this.allProds = prod.valueOf();
+      for (const prod of this.allProds) {
+        console.log(prod.productName.toLowerCase());
+        if (prod.productName.toLowerCase().search(this.searchQuery.toLowerCase()) >= 0) {
+          this.productService.getProductById(prod.id)
+            .subscribe(resp => {
+              this.router.navigate(['/product-details', prod.id]);
+            });
+        }
+      }
+    });
   }
-
-
 }
