@@ -18,6 +18,7 @@ import { LogoutComponent } from './logout/logout.component';
 import { RegisterComponent } from './register/register.component';
 import { ProductsComponent } from './products/products.component';
 import { ProductDetailsComponent } from './products/product-details/product-details.component';
+import { SearchProductComponent } from './products/search-product/search-product.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { ProductDetailsComponent } from './products/product-details/product-deta
     LogoutComponent,
     RegisterComponent,
     ProductsComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    SearchProductComponent
     
   ],
   imports: [

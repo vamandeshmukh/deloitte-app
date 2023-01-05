@@ -10,19 +10,37 @@ import { ProductService } from 'src/app/services/product/product.service';
 })
 export class ProductDetailsComponent implements OnInit {
 
-  pid: number;
+  pId: number;
   product: any;
+  allProds: any = [];
 
   constructor(private productService: ProductService, private route: ActivatedRoute) {
-    this.pid = 0;
+    this.pId = 0;
     this.product = {}
   }
 
   ngOnInit() {
+    this.product = {}
+
     this.route.params.subscribe(params => {
-      this.pid = params['id'];
-      this.productService.getProductById(this.pid)
+      this.pId = params['id'];
+      this.productService.getProductById(this.pId)
         .subscribe(prod => this.product = prod.valueOf());
     });
+
+    this.route.paramMap.subscribe(params => {
+      const searchTerm = params.get('searchTerm');
+      console.log(params);
+      console.log(searchTerm);
+      this.productService.getAllProducts().subscribe((prod) => {
+        this.allProds = prod.valueOf();
+        for (const prod of this.allProds) {
+          // console.log(prod);
+          this.product = prod;
+          // console.log(this.product);
+        }
+      });
+    });
+
   }
 }
