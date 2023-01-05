@@ -15,7 +15,6 @@ export class SearchProductComponent {
   constructor(private router: Router, private productService: ProductService) { this.searchQuery = ''; }
 
   searchProduct() {
-
     this.productService.getAllProducts().subscribe((prod) => {
       this.allProds = prod.valueOf();
       for (const prod of this.allProds) {
@@ -30,3 +29,4 @@ export class SearchProductComponent {
     });
   }
 }
+ 

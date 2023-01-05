@@ -21,26 +21,11 @@ export class ProductDetailsComponent implements OnInit {
 
   ngOnInit() {
     this.product = {}
-
     this.route.params.subscribe(params => {
       this.pId = params['id'];
       this.productService.getProductById(this.pId)
         .subscribe(prod => this.product = prod.valueOf());
     });
-
-    // this.route.paramMap.subscribe(params => {
-    //   const searchTerm = params.get('searchTerm');
-    //   console.log(params);
-    //   console.log(searchTerm);
-    //   this.productService.getAllProducts().subscribe((prod) => {
-    //     this.allProds = prod.valueOf();
-    //     for (const prod of this.allProds) {
-    //       // console.log(prod);
-    //       this.product = prod;
-    //       // console.log(this.product);
-    //     }
-    //   });
-    // });
 
   }
 }

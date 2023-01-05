@@ -21,6 +21,10 @@ export class UserService {
     this.contentHeaders.append('Content-Type', 'application/json');
   }
 
+  getAllUsers = () => {
+    return this.http.get(`${this.httpUrl}/users`);
+  };
+
   findByUserName = (userName: string) => {
     return this.http.get(`${this.httpUrl}/users?userName=${userName}`);
   };

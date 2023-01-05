@@ -21,7 +21,6 @@ const routes: Routes = [
   { path: 'logout', component: LogoutComponent },
   { path: 'parent', component: ParentComponent },
   { path: 'products', component: ProductsComponent },
-  // { path: 'product-details/:productName', component: ProductDetailsComponent },
   { path: 'product-details/:id', component: ProductDetailsComponent },
   { path: 'register', component: RegisterComponent },
   { path: '**', component: Page404Component }
