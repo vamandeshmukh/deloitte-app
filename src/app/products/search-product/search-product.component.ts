@@ -22,6 +22,7 @@ export class SearchProductComponent {
         if (prod.productName.toLowerCase().search(this.searchQuery.toLowerCase()) >= 0) {
           this.productService.getProductById(prod.id)
             .subscribe(resp => {
+              this.searchQuery = '';
               this.router.navigate(['/product-details', prod.id]);
             });
         }
@@ -29,4 +30,4 @@ export class SearchProductComponent {
     });
   }
 }
- 
+  
