@@ -8,7 +8,10 @@ import { LogoutComponent } from './logout/logout.component';
 import { ParentComponent } from './parent/parent.component';
 import { Page404Component } from './page404/page404.component';
 import { RegisterComponent } from './register/register.component';
-import { AuthGuard } from './services/authorization/auth-guard';
+import { ProductsComponent } from './products/products.component';
+import { ProductDetailsComponent } from './products/product-details/product-details.component';
+// import { AuthGuard } from './services/authorization/auth-guard';
+
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
@@ -17,6 +20,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'logout', component: LogoutComponent },
   { path: 'parent', component: ParentComponent },
+  { path: 'products', component: ProductsComponent },
+  { path: 'product-details/:id', component: ProductDetailsComponent },
   { path: 'register', component: RegisterComponent },
   { path: '**', component: Page404Component }
 ];

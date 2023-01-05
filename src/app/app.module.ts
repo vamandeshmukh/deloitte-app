@@ -16,6 +16,8 @@ import { HeaderComponent } from './header/header.component';
 import { Page404Component } from './page404/page404.component';
 import { LogoutComponent } from './logout/logout.component';
 import { RegisterComponent } from './register/register.component';
+import { ProductsComponent } from './products/products.component';
+import { ProductDetailsComponent } from './products/product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,10 @@ import { RegisterComponent } from './register/register.component';
     HeaderComponent,
     Page404Component,
     LogoutComponent,
-    RegisterComponent
+    RegisterComponent,
+    ProductsComponent,
+    ProductDetailsComponent
+    
   ],
   imports: [
     BrowserModule,

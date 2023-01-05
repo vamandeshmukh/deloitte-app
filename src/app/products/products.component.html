@@ -1,0 +1,19 @@
+<!-- reactive form  -->
+<div class="container mt-3 pt-3">
+    <p class="display-4">Products</p>
+    <hr />
+    <div class="mt-3 pt-3">
+        <p class="lead">Our Products</p>
+        <p>We provide quality products specially created for you.</p>
+    </div>
+    <div>
+        <div *ngFor="let product of productsList">
+            <a [routerLink]="['/product-details', product.id]">{{product.productName}}</a>
+            <span>{{ product.productName }} {{ product.price }} {{ product.description }}</span>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- <product-details [product]="selectedProduct"></product-details> -->
