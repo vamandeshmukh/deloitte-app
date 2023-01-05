@@ -7,10 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  firstName = '';
-  
-  getFun = () => {
-    console.log('event binding');
-   };
 
 }
